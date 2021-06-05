@@ -91,7 +91,7 @@ public class Flight implements Serializable {
                 "id=" + id +
                 ", destination='" + destination + '\'' +
                 ", date=" + date +
-                ", connection=" + connection +
+                connection +
                 ", clients=" + clients +
                 '}';
     }

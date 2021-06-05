@@ -24,13 +24,15 @@ public class Client implements Serializable {
 
     public Client(){}
 
-    public Client(Long id, String name, LocalDate birthDate, Boolean deficient, String phone, String email) {
+    public Client(Long id, String name, LocalDate birthDate, Boolean deficient, String phone,
+     String email, Flight flight) {
         this.id = id;
         this.name = name;
         this.birthDate = birthDate;
         this.deficient = deficient;
         this.phone = phone;
         this.email = email;
+        this.flight = flight;
     }
 
     public Long getId() {

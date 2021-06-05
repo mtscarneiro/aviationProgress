@@ -10,11 +10,12 @@ public class FlightConnection implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Flight connection;
+    
+    private String connection;
 
     public FlightConnection() {}
 
-    public FlightConnection(Long id, Flight connection) {
+    public FlightConnection(Long id, String connection) {
         this.id = id;
         this.connection = connection;
     }
@@ -27,11 +28,11 @@ public class FlightConnection implements Serializable {
         this.id = id;
     }
 
-    public Flight getConnection() {
+    public String getConnection() {
         return connection;
     }
 
-    public void setConnection(Flight connection) {
+    public void setConnection(String connection) {
         this.connection = connection;
     }
 
