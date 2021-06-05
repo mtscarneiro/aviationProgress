@@ -5,6 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import outedg.mtscarneiro.aviation.domain.Client;
 import outedg.mtscarneiro.aviation.domain.Flight;
 import outedg.mtscarneiro.aviation.domain.FlightConnection;
+import outedg.mtscarneiro.aviation.domain.Payment;
 
 import java.time.LocalDate;
 
@@ -21,7 +22,8 @@ class DefaultApplicationTests {
 		client.age(client.getBirthDate());
 		client.setDeficient(false);
 		client.setFlight(new Flight(null, "Manaus", LocalDate.now(),
-				new FlightConnection(null, null)));
+				new FlightConnection(null, null),
+				Payment.PAID));
 
 		System.out.println(client);
 	}
