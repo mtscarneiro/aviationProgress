@@ -21,6 +21,8 @@ public class Flight implements Serializable {
     @Lob
     private FlightConnection connection;
 
+    private Payment status;
+
     @JsonIgnore
     @OneToMany(mappedBy = "flight")
     private List<Client> clients = new ArrayList<>();
@@ -29,11 +31,14 @@ public class Flight implements Serializable {
 
     }
 
-    public Flight(Long id, String destination, LocalDate date, FlightConnection connection) {
+    public Flight(Long id, String destination,
+     LocalDate date, FlightConnection connection,
+     Payment status) {
         this.id = id;
         this.destination = destination;
         this.date = date;
         this.connection = connection;
+        this.status = status;
     }
 
     public Long getId() {
@@ -70,6 +75,14 @@ public class Flight implements Serializable {
 
     public List<Client> getClients() {
         return clients;
+    }
+
+    public Payment getStatus() {
+        return status;
+    }
+
+    public void setStatus(Payment status) {
+        this.status = status;
     }
 
     @Override

@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Profile;
 import outedg.mtscarneiro.aviation.domain.Client;
 import outedg.mtscarneiro.aviation.domain.Flight;
 import outedg.mtscarneiro.aviation.domain.FlightConnection;
+import outedg.mtscarneiro.aviation.domain.Payment;
 import outedg.mtscarneiro.aviation.repositories.ClientRepository;
 import outedg.mtscarneiro.aviation.repositories.FlightConnectionRepository;
 import outedg.mtscarneiro.aviation.repositories.FlightRepository;
@@ -47,10 +48,10 @@ public class TestConfig implements CommandLineRunner {
 
 
         Flight a1001 = new Flight(null, "Manaus", LocalDate.now(),
-                connection1);
+                connection1, Payment.ORDERED);
 
         Flight a1002 = new Flight(null, "Rio de Janeiro", LocalDate.of(2021, 9, 30),
-                connection2);
+                connection2, Payment.PAID);
 
         connectionRepository.saveAll(Arrays.asList(connection1, connection2));
         
