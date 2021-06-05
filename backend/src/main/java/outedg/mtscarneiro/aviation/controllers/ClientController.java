@@ -1,5 +1,6 @@
 package outedg.mtscarneiro.aviation.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequestMapping(value = "/api/passenger")
 public class ClientController {
 
+    @Autowired
     private ClientService clientService;
 
     @GetMapping

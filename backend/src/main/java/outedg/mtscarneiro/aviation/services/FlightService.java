@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
-import outedg.mtscarneiro.aviation.domain.Client;
 import outedg.mtscarneiro.aviation.domain.Flight;
-import outedg.mtscarneiro.aviation.repositories.ClientRepository;
 import outedg.mtscarneiro.aviation.repositories.FlightRepository;
 import outedg.mtscarneiro.aviation.services.exceptions.DatabaseException;
 import outedg.mtscarneiro.aviation.services.exceptions.ResourceNotFoundException;
@@ -52,7 +50,7 @@ public class FlightService {
 
     public Flight update(Long id, Flight obj) {
         try {
-            Flight entity = repository.getOne(id);
+            Flight entity = repository.getById(id);
             updateData(entity, obj);
             return repository.save(entity);
         } catch (EntityNotFoundException e) {

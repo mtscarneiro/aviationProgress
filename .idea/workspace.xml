@@ -30,6 +30,14 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="12e2729a-116e-44ed-8cda-c55d9086bdb7" />
+        <option name="url" value="https://github.com/mtscarneiro/aviationProgress.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="1tPK18qnsQrYVsDYrzhKh4ycRY6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />

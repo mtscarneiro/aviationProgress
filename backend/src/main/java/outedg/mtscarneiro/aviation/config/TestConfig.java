@@ -45,7 +45,7 @@ public class TestConfig implements CommandLineRunner {
 
 
         Flight a1001 = new Flight(null, "Manaus", LocalDate.now(),
-           connection1);
+                connection1);
 
         Flight a1002 = new Flight(null, "Rio de Janeiro", LocalDate.of(2021, 9, 30),
                 connection2);
@@ -53,6 +53,5 @@ public class TestConfig implements CommandLineRunner {
         clientRepository.saveAll(Arrays.asList(client1, client2));
         flightRepository.saveAll(Arrays.asList(a1001, a1002));
 
-
-    }
+        }
 }

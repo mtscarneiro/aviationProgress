@@ -1,11 +1,10 @@
 package outedg.mtscarneiro.aviation.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import outedg.mtscarneiro.aviation.domain.Client;
 import outedg.mtscarneiro.aviation.domain.Flight;
-import outedg.mtscarneiro.aviation.services.ClientService;
 import outedg.mtscarneiro.aviation.services.FlightService;
 
 import java.net.URI;
@@ -15,6 +14,7 @@ import java.util.List;
 @RequestMapping(value = "/api/flights")
 public class FlightController {
 
+    @Autowired
     private FlightService flightService;
 
     @GetMapping

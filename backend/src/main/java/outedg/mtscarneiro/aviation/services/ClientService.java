@@ -51,7 +51,7 @@ public class ClientService {
 
     public Client update(Long id, Client obj) {
         try {
-            Client entity = repository.getOne(id);
+            Client entity = repository.getById(id);
             updateData(entity, obj);
             return repository.save(entity);
         } catch (EntityNotFoundException e) {

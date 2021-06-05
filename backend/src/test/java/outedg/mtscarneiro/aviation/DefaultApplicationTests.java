@@ -2,7 +2,6 @@ package outedg.mtscarneiro.aviation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
 import outedg.mtscarneiro.aviation.domain.Client;
 import outedg.mtscarneiro.aviation.domain.Flight;
 import outedg.mtscarneiro.aviation.domain.FlightConnection;
